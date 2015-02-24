@@ -4,6 +4,7 @@
   "description": "A tiny toggle library",
   "main": "index.js",
   "scripts": {
+    "build": "gulp js",
     "test": "mocha-phantomjs test/test.html"
   },
   "repository": {
