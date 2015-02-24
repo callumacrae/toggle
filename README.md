@@ -72,6 +72,10 @@ You can override them by require-ing the module and adjusting the handlers:
 ```js
 var toggle = require('toggle');
 
+toggle.toggle = function ($element) {
+	$element.toggleClass('hidden');
+};
+
 toggle.hide = function ($element) {
 	$element.addClass('hidden');
 };
