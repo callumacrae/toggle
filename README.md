@@ -1,4 +1,4 @@
-# toggle
+# toggle [![Build Status](https://travis-ci.org/callumacrae/toggle.svg)](https://travis-ci.org/callumacrae/toggle)
 
 A tiny toggle library powered by jQuery and data attributes.
 
