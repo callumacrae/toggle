@@ -28,7 +28,7 @@ function getElement(toggleName) {
 	return $('[data-toggle-name~="' + toggleName + '"]');
 }
 
-var toggles = module.exports = {
+var toggles = {
 	toggle: function ($element) {
 		$element.toggle();
 	},
@@ -39,3 +39,10 @@ var toggles = module.exports = {
 		$element.show();
 	}
 };
+
+// Sorry about this :(
+if (window.testing) {
+	window.$ = window.jQuery = $;
+}
+
+window.toggles = module.exports = toggles;

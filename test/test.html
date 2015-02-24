@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Toggle tests</title>
+
+	<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+</head>
+<body>
+	<div id="mocha"></div>
+	<div id="tests">
+		<span data-toggle-name="abc">&nbsp;</span>
+		<span data-toggle-name="de">&nbsp;</span>
+		<span data-toggle-name="fghi">&nbsp;</span>
+
+		<a class="test-one" data-toggle-target="abc"></a>
+		<a class="test-two" data-toggle-target="hide:abc"></a>
+		<a class="test-three" data-toggle-target="show:abc"></a>
+		<a class="test-four" data-toggle-target="abc show:de hide:fghi"></a>
+	</div>
+
+	<script> window.testing = true </script>
+	<script src="../dest/build.js"></script>
+
+	<script src="../node_modules/mocha/mocha.js"></script>
+	<script src="../node_modules/should/should.js"></script>
+
+	<script> mocha.setup('bdd'); </script>
+
+	<!-- test files -->
+	<script src="tests.spec.js"></script>
+	<script src="toggle.spec.js"></script>
+
+	<!-- run tests -->
+	<script>
+		if (window.mochaPhantomJS) {
+			mochaPhantomJS.run();
+		} else {
+			mocha.run();
+		}
+	</script>
+</body>
+</html>
